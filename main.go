@@ -29,6 +29,8 @@ func main() {
 	r.Use(gzip.Gzip(gzip.DefaultCompression))
 
 	registerEndpoint(r, "/newest", Newest)
+	registerEndpoint(r, "/newest/ai", NewestAI)
+	registerEndpoint(r, "/newest/noai", NewestNoAI)
 	registerEndpoint(r, "/frontpage", Frontpage)
 	registerEndpoint(r, "/newcomments", Newcomments)
 	registerEndpoint(r, "/ask", AskHN)
